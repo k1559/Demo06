@@ -15,30 +15,33 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
-namespace teht01
+namespace teht02
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
     public sealed partial class MainPage : Page
     {
+
         public MainPage()
         {
             this.InitializeComponent();
         }
 
-        private void trucksbutton_Click(object sender, RoutedEventArgs e)
+        private void eurotmarkatbutton_Click(object sender, RoutedEventArgs e)
         {
-            int value = int.Parse(truckstextBlock.Text); //"0"-> 0
-            value++;
-            truckstextBlock.Text = value.ToString(); //1->"1"
+            double markat;
+            double value = double.Parse(eurotextBox.Text);
+            markat = value * 5.95; 
+            eurotmarkattextBlock.Text = markat.ToString("0.00");
         }
 
-        private void carsbutton_Click(object sender, RoutedEventArgs e)
+        private void markateurotbutton_Click(object sender, RoutedEventArgs e)
         {
-            int value = int.Parse(carstextBlock.Text); //"0"-> 0
-            value++;
-            carstextBlock.Text = value.ToString(); //1->"1"
+            double eurot;
+            double value = double.Parse(markkatextBox.Text);
+            eurot = value * 0.17;
+            markateurottextBlock.Text = eurot.ToString("0.00");
         }
     }
 }
